@@ -9,3 +9,6 @@ class BowlingGame:
         score = 0
         roll_index = 0
         for frame in range(10):
+            if self._is_strike(roll_index):
+                score += 10 + self.rolls[roll_index+1] + self.rolls[roll_index+2]
+                roll_index += 1
