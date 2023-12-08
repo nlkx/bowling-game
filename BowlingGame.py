@@ -12,3 +12,6 @@ class BowlingGame:
             if self._is_strike(roll_index):
                 score += 10 + self.rolls[roll_index+1] + self.rolls[roll_index+2]
                 roll_index += 1
+            elif self._is_spare(roll_index):
+                score += 10 + self.rolls[roll_index+2]
+                roll_index += 2
