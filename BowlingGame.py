@@ -15,3 +15,7 @@ class BowlingGame:
             elif self._is_spare(roll_index):
                 score += 10 + self.rolls[roll_index+2]
                 roll_index += 2
+            else:
+                score += self.rolls[roll_index] + self.rolls[roll_index+1]
+                roll_index += 2
+        return score
