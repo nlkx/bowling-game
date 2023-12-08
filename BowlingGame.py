@@ -19,3 +19,18 @@ class BowlingGame:
                 score += self.rolls[roll_index] + self.rolls[roll_index+1]
                 roll_index += 2
         return score
+    
+    def _is_strike(self, roll_index):
+        return self.rolls[roll_index] == 10
+    
+    def _is_spare(self, roll_index):
+        return self.rolls[roll_index] + self.rolls[roll_index+1] == 10
+    
+def strikeScore(self, rollIndex):
+    return 10 + self.rolls[rollIndex + 1] + self.rolls[rollIndex + 2]
+
+def spareScore(self, rollIndex):
+    return 10 + self.rolls[rollIndex + 1]
+
+def frameScore(self, rollIndex):
+    return self.rolls[rollIndex] + self.rolls[rollIndex + 1]
