@@ -21,4 +21,9 @@ class TestBowlingGame(unittest.TestCase):
         self._roll_many(0, 17)
         self.assertEqual(16, self.game.total_score())
 
-    
+    def test_one_strike(self):
+        self.game.roll(10)
+        self.game.roll(3)
+        self.game.roll(4)
+        self._roll_many(0, 16)
+        self.assertEqual(24, self.game.total_score())
